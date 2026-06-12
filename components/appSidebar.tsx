@@ -16,13 +16,6 @@ import { UserDetailsContext } from "@/context/userDetailContext"
 import { useContext } from "react"
 import { Id } from "@/convex/_generated/dataModel"
 
-interface userSchema {
-    name: string;
-    email: string;
-    picture: string;
-    _id: Id<"users">;
-    token: number;
-};
   
   export function AppSidebar() {
 
@@ -37,7 +30,7 @@ interface userSchema {
     const logOut = () => {
       if(typeof window !== undefined){
         localStorage.removeItem("user");
-        setUserDetails(null);
+        setUserDetails({...userDetails,name: "",email:"",picture:"",token:0});
         router.replace("/");
       }
     };

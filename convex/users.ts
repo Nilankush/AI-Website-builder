@@ -23,7 +23,7 @@ export const createUser = mutation({
             console.log(id);
             return id;
         };
-        return user[0]._id;
+        return user[0];
     }
 });
 

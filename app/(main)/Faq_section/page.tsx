@@ -7,7 +7,7 @@ import {
 
 export default function Faq(){
     return(
-        <div className="w-full h-full flex flex-col items-center gap-4">
+        <div className="w-full h-full flex flex-col items-center gap-4 mt-10">
             <h1 className="scroll-m-20 text-2xl font-semibold tracking-tight mt-20 mb-2">FAQs:</h1>
             <HoverCard openDelay={10} closeDelay={100}>
                 <HoverCardTrigger asChild>

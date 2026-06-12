@@ -69,7 +69,7 @@ export default function PromptSection(){
 
  return(
     <div className="flex flex-col items-center justify-center gap-2 mt-30">
-        <h2 className="text-4xl font-bold">What will you build today?</h2>
+        <h2 className="text-2xl md:text-4xl font-bold">What will you build today?</h2>
         <p className="font-medium">Create stunning apps & websites by chatting with AI.</p>
         <div className="border rounded-2xl p-5 max-w-2xl w-full mt-5">
             <div className="flex gap-2">

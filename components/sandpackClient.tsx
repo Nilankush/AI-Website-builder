@@ -17,7 +17,7 @@ export default function SandpackClient(){
     const{action, setAction} = actionContext;
 
     const getClientId = async() => {
-        const client = await previewRef.current?.getClient();
+        const client = previewRef.current?.getClient();
         if(client){
             const result = await client.getCodeSandboxURL();
                         

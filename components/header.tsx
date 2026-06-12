@@ -41,11 +41,11 @@ export default function Header(){
     };
 
     return(
-        <div className=" w-full flex p-4 items-center justify-between shadow-cyan-300 shadow-2xl">
+        <div className="fixed top-0 z-50 bg-accent w-full flex p-4 items-center justify-between shadow-cyan-300 shadow-2xl">
             <h2 className="text-xl font-bold">AI WEBSITE BUILDER</h2>
             <div className="flex gap-5 items-center justify-between">
                 <ModeToggle/>
-                {!userDetails && 
+                {!userDetails?.name && 
                 (<div className="flex gap-5 items-center justify-between">
                 <Button onClick={()=>setOpenDialog(true)} variant={"ghost"}>Sign in</Button>
                 <Button variant={"secondary"} className="bg-blue-500">Get Started</Button>

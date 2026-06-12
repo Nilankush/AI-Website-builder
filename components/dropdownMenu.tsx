@@ -28,7 +28,7 @@ export function Menu() {
   const logOut = () => {
     if(typeof window !== undefined){
       localStorage.removeItem("user");
-      setUserDetails(null);
+      setUserDetails({...userDetails,name: "",email:"",picture:"",token:0});
       router.push("/")
     }
   };
@@ -36,7 +36,7 @@ export function Menu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        {userDetails && 
+        {userDetails?.name && 
         <div className="flex items-end p-1">
             <Image
             src={userDetails?.picture} alt="user" height={30} width={30} 

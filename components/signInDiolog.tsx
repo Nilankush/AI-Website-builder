@@ -46,7 +46,7 @@ import { Id } from "@/convex/_generated/dataModel";
         );
         //save to database
         const user = userInfo?.data;
-        const userId = await createUser({
+        const userId: any = await createUser({
           name: user?.name,
           email: user?.email,
           picture: user?.picture,
@@ -57,8 +57,8 @@ import { Id } from "@/convex/_generated/dataModel";
           name: user?.name,
           email: user?.email,
           picture: user?.picture,
-          _id: userId,
-          token: 10000
+          _id: userId || userId._id,
+          token: userId.token || 10000
         };
 
         if(typeof window !== undefined){
