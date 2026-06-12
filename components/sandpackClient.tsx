@@ -2,11 +2,13 @@
 
 import { ActionContext } from "@/context/actionContext";
 import { SandpackPreview, SandpackPreviewRef, useSandpack } from "@codesandbox/sandpack-react";
+
 import { useContext, useEffect, useRef } from "react";
+
 
 export default function SandpackClient(){
 
-    const {sandpack} = useSandpack();
+    const { sandpack } = useSandpack();
     const previewRef = useRef<SandpackPreviewRef>(null);
     const actionContext = useContext(ActionContext);
 
@@ -19,7 +21,8 @@ export default function SandpackClient(){
     const getClientId = async() => {
         const client = previewRef.current?.getClient();
         if(client){
-            const result = await client.getCodeSandboxURL();
+            // @ts-ignore
+            const result = await client.getCodeSandboxURL()
                         
             if(action?.actionType === "deploy"){
                 window.open(`https://${result?.sandboxId}.csb.app/`);
