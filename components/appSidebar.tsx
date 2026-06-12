@@ -14,7 +14,6 @@ import ChatHistory from "./chatHistory"
 import { useRouter } from "next/navigation"
 import { UserDetailsContext } from "@/context/userDetailContext"
 import { useContext } from "react"
-import { Id } from "@/convex/_generated/dataModel"
 
   
   export function AppSidebar() {
