@@ -117,6 +117,13 @@ export default function ChatView(){
 
     return(
         <div className="relative h-[80vh] flex flex-col">
+                {userDetails?.name && 
+                <div className="flex md:hidden fixed top-22 left-0 items-end p-1">
+                    <Image 
+                    onClick={toggleSidebar}
+                    src={userDetails?.picture} alt="user" height={30} width={30} 
+                    className="rounded-full cursor-pointer"/>
+                </div>}
             <div className="flex-1 overflow-y-scroll">
                 {messages?.map((msg,index)=>(
                     <div key={index} className="bg-accent rounded-3xl flex flex-row gap-2 p-1 mb-1 mr-1 text-sm">
@@ -129,8 +136,8 @@ export default function ChatView(){
                 {loading && <Loader content="Generating response..."/>}
             </div> 
             <div className="flex">
-                {userDetails && 
-                <div className="flex items-end p-1">
+                {userDetails?.name && 
+                <div className="hidden md:flex items-end p-1">
                     <Image 
                     onClick={toggleSidebar}
                     src={userDetails?.picture} alt="user" height={30} width={30} 

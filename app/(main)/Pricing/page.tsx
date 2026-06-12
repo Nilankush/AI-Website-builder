@@ -67,7 +67,7 @@ export default function Pricing(){
       };
 
     return(
-        <div className="flex flex-col items-center mt-25 md:mt-30 p-10 border-2 rounded-2xl mx-5">
+        <div className="flex flex-col items-center mt-25 md:mt-30 p-10 border-2 rounded-2xl mx-5 mb-5 md:mb-0">
             <div className="flex flex-col items-center">
                 <h1 className="text-5xl font-semibold">Pricing</h1>
                 <h2 className="mt-5 text-sm">Start with a free account to speed up your workflow on 
