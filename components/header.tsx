@@ -41,10 +41,10 @@ export default function Header(){
     };
 
     return(
-        <div className="fixed top-0 z-1 bg-accent w-full flex py-2 px-2 md:py-4 md:px-4 items-center justify-between shadow-cyan-300 shadow-2xl">
+        <div className="fixed top-0 z-1 bg-accent w-full flex py-3 px-3 md:py-4 md:px-4 items-center justify-between shadow-cyan-300 shadow-2xl">
             <h2 className="hidden md:flex text-2xl font-bold">AI WEBSITE BUILDER</h2>
             <h2 className="font-bold md:hidden text-lg"><i>A_W_B</i></h2>
-            <div className="flex gap-5 items-center justify-between">
+            <div className="flex gap-2 md:gap-5 items-center justify-between">
                 <ModeToggle/>
                 {!userDetails?.name && 
                 (<div className="flex gap-5 items-center justify-between">
