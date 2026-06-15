@@ -68,9 +68,9 @@ export default function PromptSection(){
     };
 
  return(
-    <div className="flex flex-col items-center justify-center gap-4 mt-50 px-2">
+    <div className="flex flex-col items-center justify-center gap-2 mt-50 px-2">
         <h2 className="text-2xl md:text-5xl font-bold">What will you build today?</h2>
-        <p className="font-medium">Create stunning apps & websites by chatting with AI.</p>
+        <p className="font-medium text-sm">Create stunning apps & websites by chatting with AI.</p>
         <div className="border rounded-2xl p-5 max-w-2xl w-full mt-5">
             <div className="flex gap-2">
                 <textarea
