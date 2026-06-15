@@ -41,7 +41,7 @@ export default function Header(){
     };
 
     return(
-        <div className="fixed top-0 z-1 bg-accent w-full flex p-4 items-center justify-between shadow-cyan-300 shadow-2xl">
+        <div className="fixed top-0 z-1 bg-accent w-full flex p-2 md:p-4 items-center justify-between shadow-cyan-300 shadow-2xl">
             <h2 className="hidden md:flex text-2xl font-bold">AI WEBSITE BUILDER</h2>
             <h2 className="font-bold md:hidden text-lg"><i>A_W_B</i></h2>
             <div className="flex gap-5 items-center justify-between">
