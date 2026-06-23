@@ -91,11 +91,11 @@ export default function Pricing(){
                         </p>
                         <p className="w-full text-sm flex justify-center p-5">{option.desc}</p>
                         <h1 className="w-full border text-3xl font-bold flex justify-center p-5 mb-3">${option.price}</h1>
-                        <PayPalButtons 
+                        <PayPalButtons
                         onClick={()=>setOptions(option)}
                         onApprove={onSuccess}
                         onCancel={()=>alert("Payment failed")}
-                        style={{layout: "horizontal", label: "checkout"}}
+                        style={{layout: "horizontal", color: "blue" , tagline: false, borderRadius: 0}}
                         createOrder={(data,actions)=>{
                             return actions.order.create({
                                 intent: "CAPTURE",
